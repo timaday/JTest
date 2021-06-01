@@ -1,0 +1,27 @@
+{
+    "name": "jupiter/tas",
+    "description": "Test Automation Solution for the Jupiter Project",
+    "type": "project",
+    "require-dev": {
+        "behat/behat": "^3.8",
+        "behat/mink": "^1.8",
+        "behat/mink-extension": "^2.3",
+        "phpunit/phpunit": "^9.5",
+        "php-webdriver/webdriver": "^1.11",
+        "laminas/laminas-config": "^3.5",
+        "postcon/bootstrap-extension": "@dev",
+        "vlucas/phpdotenv": "^3.6"
+    },
+    "authors": [
+        {
+            "name": "Tim Day",
+            "email": "timothy.a.day@hotmail.co.uk"
+        }
+    ],
+    "config": {
+        "bin-dir": "bin/"
+    },
+    "autoload-dev": {
+        "psr-4": { "TAS\\": "features/TAS/" }
+    }
+}

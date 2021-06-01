@@ -1,0 +1,13 @@
+version: "3"
+services:
+  chrome:
+    image: selenium/standalone-chrome-debug:3.141.59-20200525
+    container_name: 'selenium_chrome'
+    ports:
+      - 4444:4444
+      - 9123:5900
+    volumes:
+      # Link Selenium default download directory to local 'feature/downloads'
+      - ./features/Downloads:/home/seluser/Downloads
+      # prevent chrome browser from crashing by using local resource
+      - ./features/ChromeCache:/etc/shm

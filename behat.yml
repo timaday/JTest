@@ -1,0 +1,17 @@
+default:
+  autoload:
+    features: features/modules/Jupiter
+    bootstrap: features/bootstrap/Definition
+  gherkin:
+    cache: ~
+    filters:
+      tags: "@chrome&&~@manual&&~@exclude"
+  suites:
+    jupitor:
+      contexts:
+        - TAS\Definition\JupiterDefaultContext:
+            module: "Jupiter"
+            browser: "chrome"
+  extensions:
+    Behat\BootstrapExtension\Extension:
+      bootstrap_file: features/TAS/bootstrap.php

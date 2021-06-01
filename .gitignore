@@ -1,0 +1,8 @@
+/.idea/
+vendor/
+/bin/
+
+features/Downloads/*
+features/ChromeCache/*
+
+
